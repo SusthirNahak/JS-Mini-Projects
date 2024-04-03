@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: azure;
+}
+.maindiv{
+    text-align: center;
+    height: 100vh;
+    margin-top: 30vh;
+}
+button h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(7, 7, 7);
+    font-family: sans-serif;
+}
+button h2 {
+    font-size: 21px;
+    font-weight: 500;
+    color: rgb(17, 17, 172);
+    font-family: sans-serif;
+}

@@ -1,5 +1,4 @@
 let String = "";
-
 function imageUploaded() {
   let file = document.querySelector("input[type=file]")["files"][0];
   let reader = new FileReader();
