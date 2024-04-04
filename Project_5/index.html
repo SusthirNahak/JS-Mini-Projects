@@ -9,16 +9,18 @@
 </head>
 
 <body>
-	
 	<div class="maindiv">
-		<h2>Convert image into String using JavaScript</h2>
-		<input type="file" id="fileId" onchange="imageUploaded()">
-		<br><br>
-	
-		<button onclick="displayString()">
-			<h3>Display converted image into String format</h3>
-		</button>
+
+		<h2>Image to String Conversion</h2>
+		<form action="">
+			<label >File</label>
+			<input type="file"  id="imgFile"  onchange="img2Str()"/>
+			<br><br><br>
+			<textarea onfocus="str2Image()" id="xyz" cols="80" rows="10"></textarea>
+		</form>
+		<img src="" alt="" id="imgTag"/>
 	</div>
+	
 	
 	<script src="../Project_5/script.js"></script>
 </body>

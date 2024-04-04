@@ -9,15 +9,9 @@ body{
     height: 100vh;
     margin-top: 30vh;
 }
-button h3 {
-    font-size: 18px;
-    font-weight: 500;
-    color: rgb(7, 7, 7);
-    font-family: sans-serif;
-}
-button h2 {
-    font-size: 21px;
-    font-weight: 500;
+h2 {
+    font-size: 25px;
+    font-weight: 700;
     color: rgb(17, 17, 172);
     font-family: sans-serif;
 }
