@@ -12,6 +12,9 @@
 			<input type="text" placeholder="enter city name" spellcheck="false">
 			<button><img src="images/search.png" alt=""></button>
 		</div>
+		<div class="error">
+			<p>invalid city name</p>
+		</div>
 		<div class="weather">
 			<img src="images/clouds.png" class="weather-icon" alt="">
 			<h1 class="temp">22° C</h1>
@@ -43,13 +46,22 @@
 		
 		async function checkWeather(city){
 			const apiUrl = `${baseUrl}?units=metric&q=${city}&appid=${apiKey}`;
+
 			const response = await fetch(apiUrl);
+			if(response.status == 404){
+				document.querySelector(".error").style.display = "block";
+				document.querySelector(".weather").style.display = "none";
+			}else{
 			const data = await response.json();
 			
 			document.querySelector(".city").innerHTML = data.name;
 			document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + " °C";    
 			document.querySelector(".humidity").innerHTML = data.main.humidity + " %";    
 			document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";    
+			document.querySelector(".weather").style.display = "block";
+			document.querySelector(".error").style.display = "none";
+			}
+			
 		}
 		
 		searchbtn.addEventListener("click", () => {
